@@ -3,6 +3,7 @@ const request = require('supertest');
 var CryptoJS = require("crypto-js");
 
 const authTest = (app) => {
+
     describe('POST /auth/signin', function () {
         it('respond with json containing user login', function (done) {
             request(app)
