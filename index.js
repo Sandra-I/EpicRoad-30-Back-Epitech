@@ -8,11 +8,15 @@ app.use(cors());
 app.use(express.json());
 
 // Contollers
-var restaurantcontroller = require("./controllers/restaurantcontroller")
+var restaurantController = require("./controllers/restaurantController")
+var activityController = require("./controllers/activityController")
+var hotelController = require("./controllers/hotelController")
 
 // Routes
 app.get("/", (req, res) => res.send("ok"))
-app.use("/api/restaurants", restaurantcontroller);
+app.use("/api/restaurants", restaurantController);
+app.use("/api/activities", activityController);
+app.use("/api/hotels", hotelController);
 
 // Start server on port 7000
 app.listen(7000, () => console.log("Server is running"));
