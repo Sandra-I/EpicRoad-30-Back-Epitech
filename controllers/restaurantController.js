@@ -1,6 +1,14 @@
 var express = require("express");
 var router = express.Router();
-const puppeteer = require("puppeteer");
+var launchBrowser = require('../modules/puppeter')
+
+
+let page;
+const launchPage = async () => {
+    if (page) return;
+    let browser = await launchBrowser()
+    page = await browser.newPage();
+};
 
 router.post("/", async (req, res) => {
 
@@ -9,13 +17,7 @@ router.post("/", async (req, res) => {
         return res.status(500).send("City not valid")
     }
 
-    const browser = await puppeteer.launch({
-        headless: true,
-        executablePath: process.env.CHROME_BIN || null,
-        args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage']
-    });
-
-    const page = await browser.newPage();
+    await launchPage();
     await page.goto(`https://www.tripadvisor.fr/Search?q=${city}&ssrc=e`);
     await page.waitForSelector('div.content-column')
 
@@ -41,5 +43,30 @@ router.post("/", async (req, res) => {
 
     res.json(results)
 });
+
+router.get("/:id", async (req, res) => {
+
+    let id = req.params.id
+    if (!id) {
+        return res.status(500).send("Id not valid")
+    }
+
+    await launchPage();
+    await page.goto(`https://www.tripadvisor.fr/${id}`);
+
+    // Get the "viewport" of the page, as reported by the page.
+    let results = await page.evaluate(() => {
+        return {
+            title: document.querySelector('[data-test-target="top-info-header"]') ? document.querySelector('[data-test-target="top-info-header"]').innerText : "",
+            images: document.querySelectorAll('[class="mini_photo_wrap"] img') ? [...document.querySelectorAll('[class="mini_photo_wrap"] img')].map(img => img.src) : [],
+
+        }
+    });
+
+    res.json(results)
+});
+
+
+
 
 module.exports = router;

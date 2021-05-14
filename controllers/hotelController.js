@@ -1,7 +1,13 @@
 var express = require("express");
 var router = express.Router();
-const puppeteer = require("puppeteer");
+var launchBrowser = require('../modules/puppeter')
 
+let page;
+const launchPage = async () => {
+    if (page) return;
+    let browser = await launchBrowser()
+    page = await browser.newPage();
+};
 router.post("/", async (req, res) => {
 
     let city = req.body.city;
@@ -9,13 +15,7 @@ router.post("/", async (req, res) => {
         return res.status(500).send("City not valid")
     }
 
-    const browser = await puppeteer.launch({
-        headless: true,
-        executablePath: process.env.CHROME_BIN || null,
-        args: ['--no-sandbox', '--headless', '--disable-gpu', '--disable-dev-shm-usage']
-    });
-
-    const page = await browser.newPage();
+    await launchPage();
     await page.goto(`https://www.tripadvisor.fr/Search?q=${city}&src=h&ssrc=h`);
     await page.waitForSelector('div.content-column')
 
