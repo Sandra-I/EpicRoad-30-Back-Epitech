@@ -21,13 +21,18 @@ router.get("/", (req, res) => {
 
     fetch(url, requestOptions)
         .then(response => response.json())
-        .then(result => Promise.resolve(result.response.groups[0].items.map(data => {
-            let venue = data.venue;
-            Promise.all([
-                downloadImage(`https://api.foursquare.com/v2/venues/${venue.id}/photos?client_id=${process.env.FOURSQUARE_CLIENT_ID}&client_secret=${process.env.FOURSQUARE_CLIENT_SECRET}&v=${process.env.FOURSQUARE_V}&group=venue`),
-            ])
-            return venue;
-        })))
+        .then(result => Promise.resolve(result.response.groups[0].items.reduce((acc, data) => {
+            return acc.then(venues => {
+                let venue = data.venue;
+                return fetch(`https://api.foursquare.com/v2/venues/${venue.id}/photos?client_id=${process.env.FOURSQUARE_CLIENT_ID}&client_secret=${process.env.FOURSQUARE_CLIENT_SECRET}&v=${process.env.FOURSQUARE_V}&group=venue`, requestOptions)
+                    .then(images => {
+                        console.log(images)
+                        venue.photos = images.response.photos.items.map(photo => `${process.env.APP_URL}/api/drinks/images/${photo.id}`);
+                        venues.push(venue);
+                        return Promise.resolve(venues);
+                    })
+            })
+        }, Promise.resolve([]))))
         .then(result => res.send(result))
         .catch(error => console.log('error', error));
 });
