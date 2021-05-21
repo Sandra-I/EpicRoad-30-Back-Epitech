@@ -1,21 +1,21 @@
 {
 	"info": {
-		"_postman_id": "ebc03445-4bc7-4657-8f74-332cc3615ec3",
-		"name": "EpicRoad",
+		"_postman_id": "3eb00971-88e7-47fd-b53e-1faaed30c135",
+		"name": "Epicroad",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "Auth",
+			"name": "Activités",
 			"item": [
 				{
-					"name": "Signin",
+					"name": "GET activities",
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"\",\n    \"password\": \"\"\n}",
+							"raw": "{\n    \"city\": \"strasbourg\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -23,7 +23,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:7000/api/auth/signin",
+							"raw": "http://localhost:7000/api/activities",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -31,29 +31,51 @@
 							"port": "7000",
 							"path": [
 								"api",
-								"auth",
-								"signin"
+								"activities"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Hotels",
+			"item": [
+				{
+					"name": "GET hotels",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/hotels?city=strasbourg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"hotels"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "strasbourg"
+								}
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "Signin Copy",
+					"name": "GET hotels by id",
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    \"email\": \"test@gmail.com\",\n    \"password\": \"test\"\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "http://localhost:7000/api/auth/signup",
+							"raw": "http://localhost:7000/api/hotels/250835",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -61,8 +83,123 @@
 							"port": "7000",
 							"path": [
 								"api",
-								"auth",
-								"signup"
+								"hotels",
+								"250835"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Restaurants",
+			"item": [
+				{
+					"name": "GET restaurants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/restaurants?city=strasbourg",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"restaurants"
+							],
+							"query": [
+								{
+									"key": "city",
+									"value": "strasbourg"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET restaurant by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/restaurants/779021",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"restaurants",
+								"779021"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Drinks",
+			"item": [
+				{
+					"name": "GET drinks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:7000/api/drinks?near=paris",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"drinks"
+							],
+							"query": [
+								{
+									"key": "near",
+									"value": "paris"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "offset",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "price",
+									"value": "2,3",
+									"disabled": true
+								},
+								{
+									"key": "openNow",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "sortByDistance",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "sortByPopularity",
+									"value": "0",
+									"disabled": true
+								}
 							]
 						}
 					},
