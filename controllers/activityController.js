@@ -9,9 +9,9 @@ const launchPage = async () => {
     page = await browser.newPage();
 };
 
-router.post("/", async (req, res) => {
+router.get("/", async (req, res) => {
 
-    let city = req.body.city;
+    let city = req.query.city;
     if (!city) {
         return res.status(500).send("City not valid")
     }
@@ -38,7 +38,7 @@ router.post("/", async (req, res) => {
         })
     });
 
-    results = results.filter(activity => activity.title != "" && activity.id != "" && activity.address.toLowerCase().includes(`, ${req.body.city.toLowerCase()}`))
+    results = results.filter(activity => activity.title != "" && activity.id != "" && activity.address.toLowerCase().includes(`, ${req.query.city.toLowerCase()}`))
 
     res.json(results)
 });
