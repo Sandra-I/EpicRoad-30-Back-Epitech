@@ -12,6 +12,7 @@ var restaurantController = require("./controllers/restaurantController")
 var activityController = require("./controllers/activityController")
 var hotelController = require("./controllers/hotelController")
 var drinkController = require("./controllers/drinkController")
+var eatController = require("./controllers/eatController")
 
 // Routes
 app.get("/", (req, res) => res.send("ok"))
@@ -19,6 +20,7 @@ app.use("/api/restaurants", restaurantController);
 app.use("/api/activities", activityController);
 app.use("/api/hotels", hotelController);
 app.use("/api/drinks", drinkController);
+app.use("/api/eats", eatController);
 
 // Start server on port 7000
 app.listen(7000, () => console.log("Server is running"));
