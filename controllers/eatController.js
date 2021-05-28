@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
     };
 
     let params = req.query;
-    let url = `https://api.foursquare.com/v2/venues/explore?client_id=${process.env.FOURSQUARE_CLIENT_ID}&client_secret=${process.env.FOURSQUARE_CLIENT_SECRET}&v=${process.env.FOURSQUARE_V}&section=drinks`
+    let url = `https://api.foursquare.com/v2/venues/explore?client_id=${process.env.FOURSQUARE_CLIENT_ID}&client_secret=${process.env.FOURSQUARE_CLIENT_SECRET}&v=${process.env.FOURSQUARE_V}&section=food`
 
     if (!params.near) return res.status(500).send("Near parameter is empty")
 
@@ -39,7 +39,7 @@ router.get("/:id", (req, res) => {
     fetch("https://api.foursquare.com/v2/venues/explore?client_id=412CJZH3QFA5OPU4ULYTJX3XQTDRVS3W2EQLMAMXWQJYPRDO&client_secret=41REZKRI5QZEPEKYQO35FOEALWHEP5EAEXV4S55NESXUTVJZ&v=20190425&near=Paris&section=drinks&limit=10&offset=5&price=2,3", requestOptions)
         .then(response => response.json())
         .then(result => Promise.resolve(result.response.groups[0].items.map(data => data.venue)))
-        .then(result => res.send(result))
+        .then(result => res.send(result.res))
         .catch(error => console.log('error', error));
 });
 
