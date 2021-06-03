@@ -18,6 +18,7 @@
   },
   "homepage": "https://gitlab.com/t-web-8003/epicroad-30-back#readme",
   "dependencies": {
+    "amadeus": "^5.7.0",
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
