@@ -1,8 +1,12 @@
 const app = require("../index");
-const authTest = require("./auh.test");
-const dataTest = require("./data.test");
-const routesTest = require("./routes.test");
+const drinkTest = require("./drink.test");
+const eatTest = require("./eat.test");
+const activityTest = require("./activity.test");
+const hotelTest = require("./hotel.test");
+const restaurantTest = require("./restaurant.test");
 
-authTest(app);
-dataTest(app);
-routesTest(app);
+drinkTest(app);
+eatTest(app);
+activityTest(app);
+hotelTest(app);
+restaurantTest(app);
