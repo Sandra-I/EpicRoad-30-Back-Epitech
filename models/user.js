@@ -12,6 +12,14 @@ const User = sequelize.define(
       type: "VARCHAR(256)",
       allowNull: false,
     },
+    lastname: {
+      type: "VARCHAR(256)",
+      allowNull: false,
+    },
+    firstname: {
+      type: "VARCHAR(256)",
+      allowNull: false,
+    }
   },
   {
     freezeTableName: true,
