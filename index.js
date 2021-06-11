@@ -10,7 +10,7 @@ app.use(express.json());
 // Contollers
 var restaurantController = require("./controllers/restaurantController")
 var activityController = require("./controllers/activityController")
-var hotelController = require("./controllers/hotelController")
+var hotelController = require("./controllers/hotelControllerApi")
 var drinkController = require("./controllers/drinkController")
 var eatController = require("./controllers/eatController")
 
