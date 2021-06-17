@@ -3,6 +3,7 @@ var router = express.Router();
 const fetch = require('node-fetch');
 const fs = require('fs');
 var Amadeus = require('amadeus');
+var Favori = require("../models/favoris");
 
 
 var amadeus = new Amadeus({

@@ -16,19 +16,6 @@ const hotelTest = (app) => {
                 .catch(err => done(err))
         });
     });
-
-    describe('Get /api/hotels', function () {
-        it('respond with json containing hotels location whithout location', function (done) {
-            this.timeout(10000);
-            request(app)
-                .get('/api/hotels')
-                .set('Content-Type', 'application/json')
-                .set('Accept', 'application/json')
-                .expect(500)
-                .then(() => done())
-                .catch(err => done(err))
-        });
-    });
 }
 
 module.exports = hotelTest;

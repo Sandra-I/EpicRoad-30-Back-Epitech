@@ -2,6 +2,9 @@ var express = require("express");
 var router = express.Router();
 const fetch = require('node-fetch');
 const fs = require('fs');
+var authenticateToken = require("../modules/authenticateToken");
+var Favori = require("../models/favoris");
+const User = require("../models/user");
 
 
 router.get("/", (req, res) => {
@@ -26,9 +29,6 @@ router.get("/", (req, res) => {
         .catch(error => console.log('error', error));
 });
 
-router.get("/category/:id/icon", (req, res) => {
-
-})
 
 router.get("/:id", (req, res) => {
     var requestOptions = {
@@ -42,7 +42,6 @@ router.get("/:id", (req, res) => {
         .then(result => res.send(result))
         .catch(error => console.log('error', error));
 });
-
 
 const downloadImage = url => {
     var requestOptions = {
