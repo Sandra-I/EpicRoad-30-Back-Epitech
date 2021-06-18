@@ -27,6 +27,30 @@ const drinkTest = (app) => {
                 .catch(err => done(err))
         });
     });
+
+    describe('Get /api/drinks/:id', function () {
+        it('respond with json containing drinks location whithout location', function (done) {
+            request(app)
+                .get('/api/drinks/aze')
+                .set('Content-Type', 'application/json')
+                .set('Accept', 'application/json')
+                .expect(200)
+                .then(() => done())
+                .catch(err => done(err))
+        });
+    });
+
+    describe('Get /api/drinks/:id/thumbnails', function () {
+        it('respond with json containing drinks location whithout location', function (done) {
+            request(app)
+                .get('/api/drinks/aze/thumbnails')
+                .set('Content-Type', 'application/json')
+                .set('Accept', 'application/json')
+                .expect(200)
+                .then(() => done())
+                .catch(err => done(err))
+        });
+    });
 }
 
 module.exports = drinkTest;
