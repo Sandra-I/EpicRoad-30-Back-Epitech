@@ -11,7 +11,8 @@ app.use(express.json());
 
 // Contollers
 var authcontroller = require("./controllers/authController");
-var hotelController = require("./controllers/hotelController")
+var activityController = require("./controllers/activityController")
+var hotelController = require("./controllers/hotelControllerApi")
 var drinkController = require("./controllers/drinkController")
 var eatController = require("./controllers/eatController")
 var favoriController = require("./controllers/favoriController")
@@ -20,6 +21,7 @@ var favoriController = require("./controllers/favoriController")
 app.get("/", (req, res) => res.send("ok"))
 app.use("/api/auth", authcontroller);
 app.use("/api/hotels", hotelController);
+app.use("/api/activities", activityController);
 app.use("/api/drinks", drinkController);
 app.use("/api/eats", eatController);
 app.use("/api/favoris", favoriController);
