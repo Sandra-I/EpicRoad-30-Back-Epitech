@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/api/activities?lat=41.397158&lng=2.160873",
+							"raw": "http://localhost:7000/api/activities?lat=43.5569974&lng=1.4534657",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -27,15 +27,20 @@
 							"query": [
 								{
 									"key": "lat",
-									"value": "41.397158"
+									"value": "43.5569974"
 								},
 								{
 									"key": "lng",
-									"value": "2.160873"
+									"value": "1.4534657"
 								},
 								{
 									"key": "radius",
-									"value": null,
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "adress",
+									"value": "16 Rue des Lois, 31000 Toulouse",
 									"disabled": true
 								}
 							]
@@ -119,7 +124,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/api/hotels?city=strasbourg",
+							"raw": "http://localhost:7000/api/hotels?latitude=43.5569974&longitude=1.4534657",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -131,8 +136,137 @@
 							],
 							"query": [
 								{
-									"key": "city",
-									"value": "strasbourg"
+									"key": "cityCode",
+									"value": "TLS",
+									"disabled": true
+								},
+								{
+									"key": "latitude",
+									"value": "43.5569974"
+								},
+								{
+									"key": "longitude",
+									"value": "1.4534657"
+								},
+								{
+									"key": "hotelIds",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "checkInDate",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "checkOutDate",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "roomQuantity",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "adults",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "radius",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "radiusUnit",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "hotelName",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "chains",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "rateCodes",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "amenities",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "ratings",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "priceRange",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "currency",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "payementPolicy",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "boardType",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "includeClosed",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "bestRateOnly",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "view",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "sort",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "page[limit]",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "page[offset]",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "lang",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "cacheControl",
+									"value": null,
+									"disabled": true
 								}
 							]
 						}
@@ -784,7 +918,33 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "http://localhost:7000/api/transport/?origin=95 Avenue de Rangueil, 31400&destination=111 Rue du Languedoc, 31600&mode=bicycling",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"transport",
+								""
+							],
+							"query": [
+								{
+									"key": "origin",
+									"value": "95 Avenue de Rangueil, 31400"
+								},
+								{
+									"key": "destination",
+									"value": "111 Rue du Languedoc, 31600"
+								},
+								{
+									"key": "mode",
+									"value": "bicycling"
+								}
+							]
+						}
 					},
 					"response": []
 				}
