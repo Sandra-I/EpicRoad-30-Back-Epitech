@@ -38,7 +38,6 @@ router.get("/", (req, res) => {
 
 router.get("/by-hotel", (req, res) => {
 
-    let id = req.params.id;
     let params = req.query;
 
     for(i=0;i<24;i++){
