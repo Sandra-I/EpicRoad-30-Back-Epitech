@@ -33,8 +33,14 @@ router.post('/login', (req, res) => {
       user.id = user_db.id;
       const accessToken = generateAccessToken(user)
       const refreshToken = jwt.sign(user, process.env.REFRESH_TOKEN_SECRET)
+      const userCo = {
+        id: user_db.id,
+        firstname: user_db.firstname,
+        lastname: user_db.lastname,
+        email: user_db.email
+      }
       refreshTokens.push(refreshToken)
-      res.json({ accessToken: accessToken, refreshToken: refreshToken })
+      res.json({ accessToken: accessToken, refreshToken: refreshToken, user: userCo })
     }
     else throw new Error("Wrong password")
   })
