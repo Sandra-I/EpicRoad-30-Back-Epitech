@@ -69,7 +69,7 @@ router.get("/:id", (req, res) => {
         redirect: 'follow'
     };
 
-    fetch(`https://api.foursquare.com/v2/venues/51eaf458498e71cde524700b?client_id=${process.env.FOURSQUARE_CLIENT_ID}&client_secret=${process.env.FOURSQUARE_CLIENT_SECRET}&v=${process.env.FOURSQUARE_V}&v=${req.params.id}`, requestOptions)
+    fetch(`https://api.foursquare.com/v2/venues/${req.params.id}?client_id=${process.env.FOURSQUARE_CLIENT_ID}&client_secret=${process.env.FOURSQUARE_CLIENT_SECRET}&v=${process.env.FOURSQUARE_V}&v=${req.params.id}`, requestOptions)
         .then(response => response.json())
         .then(result => res.send(result.response.venue))
         .catch(error => console.log('error', error));
