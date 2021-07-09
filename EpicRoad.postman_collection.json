@@ -14,7 +14,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/api/activities?lat=43.5569974&lng=1.4534657",
+							"raw": "http://localhost:7000/api/activities?lat=43.603962&lng=1.44469&radius=1&adress=",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -27,98 +27,43 @@
 							"query": [
 								{
 									"key": "lat",
-									"value": "43.5569974"
+									"value": "43.603962"
 								},
 								{
 									"key": "lng",
-									"value": "1.4534657"
+									"value": "1.44469"
 								},
 								{
 									"key": "radius",
-									"value": "1",
-									"disabled": true
+									"value": "1"
 								},
 								{
 									"key": "adress",
-									"value": "16 Rue des Lois, 31000 Toulouse",
-									"disabled": true
+									"value": ""
 								}
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "GET activities",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:7000/api/activities?city=strasbourg",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "7000",
-									"path": [
-										"api",
-										"activities"
-									],
-									"query": [
-										{
-											"key": "city",
-											"value": "strasbourg"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "10308"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"2844-G5S9XGDbfAIbDsOSsOeWgfgoUnY\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 21 May 2021 14:02:25 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 192297,\n        \"title\": \"Cathédrale Notre-Dame de Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/06/52/4e/e4/cathedrale-notre-dame.jpg\",\n        \"address\": \"Place de la Cathedrale, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"14 747 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d192297-Reviews-Cathedrale_Notre_Dame_de_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 6749594,\n        \"title\": \"One City Tours\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/e1/2e/77/petite-france.jpg\",\n        \"address\": \"5 Petite Rue du Vieux Marche aux Vins, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"1 301 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d6749594-Reviews-One_City_Tours-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"10/10\"\n    },\n    {\n        \"id\": 1584361,\n        \"title\": \"Batorama\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/01/e8/de/1a/batorama-landing.jpg\",\n        \"address\": \"1 Rue de Rohan, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"3 722 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d1584361-Reviews-Batorama-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 3749852,\n        \"title\": \"Barrage Vauban\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/03/ef/7d/b1/barrage-vauban.jpg\",\n        \"address\": \"Petite France, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"1 762 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d3749852-Reviews-Barrage_Vauban-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 4499117,\n        \"title\": \"Gare de Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/04/34/8b/76/gare-centrale-strasbourg.jpg\",\n        \"address\": \"20 Place de la Gare, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"1 510 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d4499117-Reviews-Gare_de_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 3423301,\n        \"title\": \"Parc de l'Orangerie\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/02/cc/ea/e1/parc-de-l-orangerie.jpg\",\n        \"address\": \"Allée de la Robertsau, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"2 220 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d3423301-Reviews-Parc_de_l_Orangerie-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 10387470,\n        \"title\": \"Centre-ville de Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/0b/ad/7c/bb/visite-en-touk-toukexotique.jpg\",\n        \"address\": \"Place Kléber, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"1 091 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d10387470-Reviews-Centre_ville_de_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 195696,\n        \"title\": \"Musée alsacien\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/14/9b/f1/eb/musee-alsacien.jpg\",\n        \"address\": \"23 - 25 Quai St-Nicolas, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"1 267 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d195696-Reviews-Musee_Alsacien-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 195698,\n        \"title\": \"Marché de Noël\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/06/6c/d4/40/marche-de-noel.jpg\",\n        \"address\": \"Place Broglie, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"821 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d195698-Reviews-Christmas_Market_Christkindelsmarik-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 6581836,\n        \"title\": \"Mobilboard Strasbourg Segway Tours\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/0d/dd/c5/57/en-couple-c-est-tellement.jpg\",\n        \"address\": \"16, rue d'Austerlitz, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"504 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d6581836-Reviews-Mobilboard_Strasbourg_Segway_Tours-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"10/10\"\n    },\n    {\n        \"id\": 12205170,\n        \"title\": \"Escape Yourself Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/0f/72/1c/c0/logo.jpg\",\n        \"address\": \"4, Rue des Bonnes Gens, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"219 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d12205170-Reviews-Escape_Yourself_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 4508260,\n        \"title\": \"Le Vaisseau\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/04/5f/e0/70/entree-du-vaisseau-c.jpg\",\n        \"address\": \"1 rue Philippe Dollinger, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"512 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d4508260-Reviews-Le_Vaisseau-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 7155572,\n        \"title\": \"Cyclorama Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/18/d4/fd/cc/strasbourg-bike-tour.jpg\",\n        \"address\": \"Place de la Cathédrale, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"161 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d7155572-Reviews-Cyclorama_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"10/10\"\n    },\n    {\n        \"id\": 1977202,\n        \"title\": \"Musée historique de la Ville de Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/04/76/f0/3d/history-museum.jpg\",\n        \"address\": \"2, rue du Vieux Marche aux Poissons, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"584 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d1977202-Reviews-Musee_historique_de_la_Ville_de_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 877692,\n        \"title\": \"Parlement Européen\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/17/3f/15/0a/20190420-120843-largejpg.jpg\",\n        \"address\": \"Allée du Printemps, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"1 138 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d877692-Reviews-European_Parliament_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 8527176,\n        \"title\": \"Place Kléber\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/08/b8/69/e2/place-kleber.jpg\",\n        \"address\": \"Place Kléber, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"832 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d8527176-Reviews-Place_Kleber-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 219714,\n        \"title\": \"Palais de Rohan\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/0f/eb/c9/cd/museum-complex-with-view.jpg\",\n        \"address\": \"2 Place du Chateau, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"730 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d219714-Reviews-Palais_de_Rohan-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 7625060,\n        \"title\": \"Hammam et Traditions\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/08/56/92/91/hammam-et-traditions.jpg\",\n        \"address\": \"2 Rue Kageneck, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"252 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d7625060-Reviews-Hammam_et_Traditions-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 241388,\n        \"title\": \"Église protestante Saint-Pierre-le-Jeune\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/13/5b/d8/4b/eglise-protestante-saint.jpg\",\n        \"address\": \"3 Rue de la Nuée Bleue , Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"465 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d241388-Reviews-Eglise_protestante_Saint_Pierre_le_Jeune-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 195755,\n        \"title\": \"Musée de l'Œuvre Notre-Dame\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/0d/6d/88/77/otro-de-sus-patios.jpg\",\n        \"address\": \"3 Place du Château, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"419 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d195755-Reviews-Musee_de_l_OEuvre_Notre_Dame-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 10430856,\n        \"title\": \"Horloge Astronomique\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/0c/1e/61/57/reloj-astronomico-de.jpg\",\n        \"address\": \"Place de la Cathedrale, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"548 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d10430856-Reviews-Horloge_Astronomique-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 9783309,\n        \"title\": \"A Maze In - Live Escape Game à Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/14/75/d5/b0/la-gaming-zone-dans-un.jpg\",\n        \"address\": \"5 Quai de Paris, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"322 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d9783309-Reviews-A_Maze_In_Live_Escape_Game_a_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 4097987,\n        \"title\": \"Pont Couverts\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-o/04/62/cb/ed/les-ponts-couverts-strasbourg.jpg\",\n        \"address\": \"Ponts Couverts, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"681 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d4097987-Reviews-Pont_Couverts-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 12318375,\n        \"title\": \"THE LITTLE RED DOOR\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1a/ce/62/2b/la-prophetie-maya-escape.jpg\",\n        \"address\": \"5 Rue des Boeufs, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"388 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d12318375-Reviews-THE_LITTLE_RED_DOOR-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"10/10\"\n    },\n    {\n        \"id\": 1394523,\n        \"title\": \"Cave historique des hospices civils de Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/04/73/7c/78/faculty-of-medicine.jpg\",\n        \"address\": \"1 Place de l Hopital, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinions\": {\n            \"number\": \"398 avis\",\n            \"url\": \"https://www.tripadvisor.fr/Attraction_Review-g187075-d1394523-Reviews-Cave_historique_des_hospices_civils_de_Strasbourg-Strasbourg_Bas_Rhin_Grand_Est.html#REVIEWS\"\n        },\n        \"grade\": \"9/10\"\n    }\n]"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "GET activities by id",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": null
+						"url": {
+							"raw": "http://localhost:7000/api/activities/61241",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "7000",
+							"path": [
+								"api",
+								"activities",
+								"61241"
+							]
+						}
 					},
 					"response": []
 				}
@@ -133,7 +78,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/api/hotels?latitude=43.5569974&longitude=1.4534657",
+							"raw": "http://localhost:7000/api/hotels?cityCode=TLS&hotelIds=&checkInDate&checkOutDate&roomQuantity=&adults&radius&radiusUnit&hotelName&chains&rateCodes&amenities&ratings&priceRange=&currency=&payementPolicy&boardType&includeClosed&bestRateOnly&view&sort&lang&cacheControl",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -146,120 +91,101 @@
 							"query": [
 								{
 									"key": "cityCode",
-									"value": "TLS",
-									"disabled": true
+									"value": "TLS"
 								},
 								{
 									"key": "latitude",
-									"value": "43.5569974"
+									"value": "43.5569974",
+									"disabled": true
 								},
 								{
 									"key": "longitude",
-									"value": "1.4534657"
+									"value": "1.4534657",
+									"disabled": true
 								},
 								{
 									"key": "hotelIds",
-									"value": null,
-									"disabled": true
+									"value": ""
 								},
 								{
 									"key": "checkInDate",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "checkOutDate",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "roomQuantity",
-									"value": null,
-									"disabled": true
+									"value": ""
 								},
 								{
 									"key": "adults",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "radius",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "radiusUnit",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "hotelName",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "chains",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "rateCodes",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "amenities",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "ratings",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "priceRange",
-									"value": null,
-									"disabled": true
+									"value": ""
 								},
 								{
 									"key": "currency",
-									"value": null,
-									"disabled": true
+									"value": ""
 								},
 								{
 									"key": "payementPolicy",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "boardType",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "includeClosed",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "bestRateOnly",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "view",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "sort",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "page[limit]",
-									"value": null,
+									"value": "",
 									"disabled": true
 								},
 								{
@@ -269,91 +195,24 @@
 								},
 								{
 									"key": "lang",
-									"value": null,
-									"disabled": true
+									"value": null
 								},
 								{
 									"key": "cacheControl",
-									"value": null,
-									"disabled": true
+									"value": null
 								}
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "GET hotels",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:7000/api/hotels?city=strasbourg",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "7000",
-									"path": [
-										"api",
-										"hotels"
-									],
-									"query": [
-										{
-											"key": "city",
-											"value": "strasbourg"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "6935"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"1b17-3cJh6ZmdtWX4Tj4W+TbpKjN+Rcw\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 21 May 2021 14:02:45 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "[\n    {\n        \"id\": 219824,\n        \"title\": \"Hilton Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/d1/36/23/exterior.jpg\",\n        \"address\": \"1 avenue Herrenschmidt, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"2018\",\n        \"grade\": \"7/10\"\n    },\n    {\n        \"id\": 310623,\n        \"title\": \"Hotel Gutenberg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/14/82/8b/05/exterior.jpg\",\n        \"address\": \"31 rue des Serruriers, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1712\",\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 1436560,\n        \"title\": \"Hôtel Cour du Corbeau Strasbourg - MGallery Collection\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/ba/c7/15/exterior-view.jpg\",\n        \"address\": \"6-8 Rue des Couples, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"2203\",\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 197342,\n        \"title\": \"Sofitel Strasbourg Grande Ile\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1d/01/95/ea/exterior-view.jpg\",\n        \"address\": \"4 Place Saint-Pierre-le-Jeune, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1895\",\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 261113,\n        \"title\": \"Ibis Strasbourg Centre Historique\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/d2/68/57/exterior-view.jpg\",\n        \"address\": \"7 rue de Molsheim, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1726\",\n        \"grade\": \"7/10\"\n    },\n    {\n        \"id\": 250835,\n        \"title\": \"Mercure Strasbourg Aéroport\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/06/0b/a3/e0/mercure-strasbourg-sud.jpg\",\n        \"address\": \"Rue du 23 Novembre, Ostwald, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"346\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 195693,\n        \"title\": \"Regent Petite France & Spa\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/18/7b/32/67/regent-petite-france.jpg\",\n        \"address\": \"5 Rue des Moulins, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1504\",\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 1214466,\n        \"title\": \"CERISE Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/ae/0b/69/cerise-strasbourg.jpg\",\n        \"address\": \"5 Rue Job, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"384\",\n        \"grade\": \"7/10\"\n    },\n    {\n        \"id\": 197336,\n        \"title\": \"Novotel Strasbourg Centre Halles\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/26/9f/0c/restaurant.jpg\",\n        \"address\": \"4 quai Kleber, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1295\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 228816,\n        \"title\": \"Hotel Hannong\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/12/f3/6c/31/vue-sur-l-entree.jpg\",\n        \"address\": \"15 rue du 22 Novembre, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1336\",\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 238719,\n        \"title\": \"City Résidence Strasbourg Centre\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/14/22/78/9f/chambre-city-residence.jpg\",\n        \"address\": \"1 rue des Magasins, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"672\",\n        \"grade\": \"6/10\"\n    },\n    {\n        \"id\": 300504,\n        \"title\": \"Ibis Budget Strasbourg Centre Gare\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/e9/24/86/exterior-view.jpg\",\n        \"address\": \"13 Place de la Gare, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"924\",\n        \"grade\": \"7/10\"\n    },\n    {\n        \"id\": 197338,\n        \"title\": \"Mercure Strasbourg Centre\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/ce/5c/79/exterior-view.jpg\",\n        \"address\": \"25 rue Thomann, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"983\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 197335,\n        \"title\": \"Mercure Strasbourg Palais des Congres\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1b/46/45/e9/exterior-view.jpg\",\n        \"address\": \"20 Place de Bordeaux, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1141\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 232381,\n        \"title\": \"Ibis Strasbourg Centre Gare\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/d2/61/a4/exterior-view.jpg\",\n        \"address\": \"10 Place de la Gare, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1216\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 7620167,\n        \"title\": \"Athéna Hôtel & Spa\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/13/5c/15/23/spa-et-bassin-sensoriel.jpg\",\n        \"address\": \"Rue Armande Béjart, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1777\",\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 197347,\n        \"title\": \"Ibis Strasbourg Centre Halles\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/5e/3f/7d/exterior-view.jpg\",\n        \"address\": \"1 rue de Sebastopol, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"996\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 232379,\n        \"title\": \"Diana Dauphine\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/16/9f/83/bb/guest-room.jpg\",\n        \"address\": \"30 rue de la 1ere Armee, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"909\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 6599010,\n        \"title\": \"Hotel D Strasbourg\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/oyster/500/0a/1e/8b/94/suite--v10644863.jpg\",\n        \"address\": \"15 Rue du Fosse, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1184\",\n        \"grade\": \"9/10\"\n    },\n    {\n        \"id\": 197346,\n        \"title\": \"Mercure Strasbourg Centre Petite France\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/d4/4b/56/exterior-view.jpg\",\n        \"address\": \"3 rue du Maire Kuss, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"867\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 601676,\n        \"title\": \"Ibis Styles Strasbourg Centre Gare\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1b/44/d4/6d/recreational-facility.jpg\",\n        \"address\": \"14 rue du Maire Kuss, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"786\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 228859,\n        \"title\": \"Maison Rouge Strasbourg Hotel & Spa, Autograph collection\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/16/b8/1f/maison-rouge-hotel.jpg\",\n        \"address\": \"4 Rue des Francs Bourgeois, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1439\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 192317,\n        \"title\": \"Hotel De L'Europe by HappyCulture\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1b/61/7e/48/ext-rieur.jpg\",\n        \"address\": \"38, rue du Fossé des Tanneurs, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1036\",\n        \"grade\": \"8/10\"\n    },\n    {\n        \"id\": 1097877,\n        \"title\": \"Ibis Budget Strasbourg Palais des Congrès\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/07/e3/ad/92/ibis-budget-strasbourg.jpg\",\n        \"address\": \"1 B avenue Pierre Mendes France, Schiltigheim, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"741\",\n        \"grade\": \"6/10\"\n    },\n    {\n        \"id\": 197348,\n        \"title\": \"Ibis Strasbourg Centre Petite France\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1b/42/36/bc/exterior-view.jpg\",\n        \"address\": \"18 rue du Faubourg National, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"1085\",\n        \"grade\": \"7/10\"\n    },\n    {\n        \"id\": 232380,\n        \"title\": \"Premiere Classe Strasbourg Ouest\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/photo-s/1c/bc/92/23/exterieur.jpg\",\n        \"address\": \"Parc Des Poteries 6 rue Cerf Berr, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"576\",\n        \"grade\": \"6/10\"\n    },\n    {\n        \"id\": 239682,\n        \"title\": \"Chateau de l'Ile & Spa\",\n        \"icon\": \"https://media-cdn.tripadvisor.com/media/oyster/500/0f/86/50/42/grounds--v16524811.jpg\",\n        \"address\": \"4 quai Heydt, Ostwald, Strasbourg, Bas-Rhin, Grand Est, France\",\n        \"opinionsNuber\": \"802\",\n        \"grade\": \"8/10\"\n    }\n]"
-						}
-					]
+					"response": []
 				},
 				{
-					"name": "GET hotels by id",
+					"name": "GET offers by id",
 					"request": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/api/hotels/250835",
+							"raw": "http://localhost:7000/api/hotels/by-hotel?hotelId=PUTLSCTR&checkInDate&checkOutDate&adults&rateCodes&roomQuantity&currency&payementPolicy&boardType&view&lang",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -362,71 +221,57 @@
 							"path": [
 								"api",
 								"hotels",
-								"250835"
+								"by-hotel"
+							],
+							"query": [
+								{
+									"key": "hotelId",
+									"value": "PUTLSCTR"
+								},
+								{
+									"key": "checkInDate",
+									"value": null
+								},
+								{
+									"key": "checkOutDate",
+									"value": null
+								},
+								{
+									"key": "adults",
+									"value": null
+								},
+								{
+									"key": "rateCodes",
+									"value": null
+								},
+								{
+									"key": "roomQuantity",
+									"value": null
+								},
+								{
+									"key": "currency",
+									"value": null
+								},
+								{
+									"key": "payementPolicy",
+									"value": null
+								},
+								{
+									"key": "boardType",
+									"value": null
+								},
+								{
+									"key": "view",
+									"value": null
+								},
+								{
+									"key": "lang",
+									"value": null
+								}
 							]
 						}
 					},
-					"response": [
-						{
-							"name": "GET hotels by id",
-							"originalRequest": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "http://localhost:7000/api/hotels/250835",
-									"protocol": "http",
-									"host": [
-										"localhost"
-									],
-									"port": "7000",
-									"path": [
-										"api",
-										"hotels",
-										"250835"
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "4310"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"10d6-UzjNnvC2OBelbWNzCGsWBQ9hB0I\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 21 May 2021 14:02:58 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"title\": \"Mercure Strasbourg Aéroport\",\n    \"address\": \"Rue du 23 Novembre, 67540 Ostwald, Strasbourg France\",\n    \"images\": [],\n    \"phone\": \"+333/90405151\",\n    \"site\": \"\",\n    \"description\": \"Mercure Strasbourg Aéroport**** à quelques pas du centre ville c'est :97 chambres Spacieuses et insonorisées, chaque chambre est climatisée et équipée d’un mini bar, d’un sèche-cheveux,télévision écran plat. Un large bureau et l’accès WiFi sont vos alliés pourachever efficacement votre journée.Terres Gourmandes, notre restaurant,offre un cadre épuré et raffiné qui laisses'exprimer pleinement une cuisinecolorée et gourmande orchestrée par notre chef. À découvrir sur notre carte : une belle amplitudede saveurs des plus classiques aux plusinsolites ! Le BarDans notre bar, une ambiance sobreet colorée vous invite à dégusterles sélections vins gourmandsLaissez-vous guider !Le petit déjeunerUn buffet animé au fil des saisons où lesspécialitées alsaciennes sont à l’honneur.Envie d'un moment de détente !Découvrez notre Terrasse au bord de la piscine et notre Patio Déjeuner ou dîner au bord de la piscine,au coeur d’un écrin de verdure.\",\n    \"caracteristics\": [\n        {\n            \"label\": \"Équipements de l'établissement\",\n            \"feature\": [\n                \"Parking gratuit\",\n                \"Internet haut débit gratuit (Wi-Fi)\",\n                \"Piscine\",\n                \"Bar/lounge\",\n                \"Animaux domestiques autorisés (Chien/Animaux de compagnie)\",\n                \"Salles de conférence\",\n                \"Salle de réception\",\n                \"Stockage des bagages\",\n                \"Parking\",\n                \"Wi-Fi\",\n                \"Piscine extérieure\",\n                \"Restaurant\",\n                \"Petit-déjeuner disponible\",\n                \"Buffet de petit-déjeuner\",\n                \"Petit-déjeuner dans la chambre\",\n                \"Salles de réunion\",\n                \"Boutique de cadeaux\",\n                \"Journal\",\n                \"Hôtel non-fumeurs\",\n                \"Réception 24 heures sur 24\",\n                \"Nettoyage à sec\",\n                \"Service de blanchisserie\",\n                \"Cirage\"\n            ]\n        },\n        {\n            \"label\": \"Équipements de la chambre\",\n            \"feature\": [\n                \"Climatisation\",\n                \"Cheminée\",\n                \"Service de ménage\",\n                \"Service en chambre\",\n                \"Coffre-fort\",\n                \"Minibar\",\n                \"Télévision à écran plat\"\n            ]\n        },\n        {\n            \"label\": \"Types de chambre\",\n            \"feature\": [\n                \"Chambres non-fumeurs\"\n            ]\n        }\n    ],\n    \"grades\": [],\n    \"opinions\": {\n        \"number\": \"346\",\n        \"ranges\": [\n            {\n                \"label\": \"Excellent\",\n                \"number\": \"114\"\n            },\n            {\n                \"label\": \"Très bien\",\n                \"number\": \"136\"\n            },\n            {\n                \"label\": \"Moyen\",\n                \"number\": \"58\"\n            },\n            {\n                \"label\": \"Médiocre\",\n                \"number\": \"26\"\n            },\n            {\n                \"label\": \"Horrible\",\n                \"number\": \"12\"\n            }\n        ],\n        \"lastOpinions\": [\n            {\n                \"grade\": \"8/10\",\n                \"title\": \"Excellent room service\",\n                \"description\": \"Repas délicieux servis en chambre à l'heure souhaité. Emplacement idéal permettant de recharger mon véhicule électrique. Accès facile par l'autoroute pour se diriger vers Strasbourg ou en direction d'Obernai\"\n            },\n            {\n                \"grade\": \"10/10\",\n                \"title\": \"Détente et accueil chaleureux\",\n                \"description\": \"Accueil chaleureux et Paul est au Top. Paul a était à mon écoute est à su faire preuve de professionnalisme. Un grand Merci à toutes l’équipes et au cuisinier aussi qui a était lui aussi très réactif est très pro. Repas excellent 👌. Je conseil cette hôtel sans problème. \"\n            },\n            {\n                \"grade\": \"6/10\",\n                \"title\": \"Déçu\",\n                \"description\": \"Chambre longue à chauffer c’est très désagréable d’arriver dans une chambre froide, vous faites des économies en éteignant le chauffage? il serait préférable de le laisser au moins à 17/18 degrés. Niveau de standing très moyen pour le tarif \"\n            },\n            {\n                \"grade\": \"2/10\",\n                \"title\": \"2ème essai pire que le premier.\",\n                \"description\": \"Point positif de l'accès, pour toute personne sensible de l'estomac attention à la choucroute de la mer et au fromage le matin. Habitué au groupe celui-ci mériterait un bon coup de ménage: porte d'entrée quelqu'un a dû être malade, interrupteur trace non identifié, salle de bain bleu dans le fond de la baignoire et crasse marron sur le mur derrière le pommeau de douche, insecte morts entre le fauteuil et le rideau. Il n'y aura pas de troisième essai.\"\n            },\n            {\n                \"grade\": \"10/10\",\n                \"title\": \"Week-end St Valentin\",\n                \"description\": \"Nous avons choisi de profiter de l'offre \\\"Septième Ciel\\\" pour fêter le St Valentin a l'Hôtel Mercure. Ce séjour nous a permis de retrouver le plaisir des sorties et du bon repas au restaurant ! La chambre a été bien préparée et confortable, le diner - délicieux. Hôtel Mercure c'est un valeur sur pour nous : la qualité, l'accueil et le personnel toujours professionnel et sympathique... C'est pour ca nous leurs avions fait confiance pour notre mariage il y a 2 ans. Et on reviendra toujours avec plaisir !\"\n            }\n        ]\n    }\n}"
-						}
-					]
+					"response": []
 				}
 			]
 		},
