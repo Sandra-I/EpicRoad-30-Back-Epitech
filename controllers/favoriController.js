@@ -7,6 +7,15 @@ var Favori = require("../models/favoris");
 const User = require("../models/user");
 
 
+router.delete("/:id", authenticateToken, (req, res) => {
+    let id = req.params.id;
+    Favori.destroy({
+        where: { id }
+    })
+    .then(fav => res.json(fav))
+    .catch(err => res.status(500).send(err))
+})
+
 router.get("/", authenticateToken, (req, res) => {
     Favori.findAll().then(favoris => res.json(favoris.filter(favori => favori.user == req.user.id)))
         .catch(err => res.status(500).send(err))
@@ -23,8 +32,8 @@ router.get("/:type", authenticateToken, (req, res) => {
 })
 
 router.post("/", authenticateToken, (req, res) => {
-    Favori.create(Object.assign({user: req.user.id}, req.body))
-    .then(a => res.json(a));
+    Favori.create(Object.assign({ user: req.user.id }, req.body))
+        .then(a => res.json(a));
 })
 
 module.exports = router;
