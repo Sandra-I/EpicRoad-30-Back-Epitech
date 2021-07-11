@@ -842,7 +842,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:7000/api/transport/?origin=95 Avenue de Rangueil, 31400&destination=111 Rue du Languedoc, 31600",
+							"raw": "http://localhost:7000/api/transport/?origin=95 Avenue de Rangueil, 31400&destination=111 Rue du Languedoc, 31600&mode=&waypoints",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -864,8 +864,11 @@
 								},
 								{
 									"key": "mode",
-									"value": "bicycling",
-									"disabled": true
+									"value": ""
+								},
+								{
+									"key": "waypoints",
+									"value": null
 								}
 							]
 						}
