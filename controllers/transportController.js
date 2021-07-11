@@ -8,9 +8,6 @@ const path = require('path');
 router.get("/", (req, res) => {
 
     let params = req.query;
-    //coordinates of origin address
-    console.log(params)
-
     fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${params.origin}&destination=${params.destination}&mode=${params.mode}&waypoints=${params.waypoints}&key=AIzaSyAxU_TJgCawpDu7wSeaByWDpgVdvIGSiWw`)
         .then(resp => resp.json())
         .then(function(resp){
