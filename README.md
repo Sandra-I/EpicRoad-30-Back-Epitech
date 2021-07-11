@@ -9,6 +9,11 @@ Commands :
 git clone git@gitlab.com:t-web-8003/epicroad-30-back.git
 cd ../path/to/the/file
 npm install
+```
+
+**Create a `.env` file** with the same credentials as `.env-example` example. You can find API keys in the README.md of the EpicRoad main project.
+
+```
 docker-compose up
 ```
 
